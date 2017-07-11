@@ -1,0 +1,308 @@
+
+/* =================================================================
+*   首页的样式
+*
+* ================================================================== */
+
+body {
+    margin: 0;
+    padding: 0;
+    color: rgb(93, 90, 90);
+    background: url("../img/bj.gif");
+}
+
+/*  公共 样式 */
+a {
+    color: #5D5A5A;
+    text-decoration: none;
+}
+
+ul{
+    list-style-type: none;
+}
+
+img {
+    border: 0;
+
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+
+.container {
+
+    width: 1116px;
+    margin: 0 auto;
+}
+
+.header {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.header-logo {
+    margin-top: 30px;
+}
+.header-content {
+    float: right;
+}
+.header-content a,
+.header-content span {
+
+    font-weight: bold;
+    font-size: 15px;
+    color: #7A7A0A;
+}
+.header-tel {
+    margin-top: 15px;
+}
+
+/* 导航样式 */
+div.nav{
+    height: 44px;
+
+    background: url(../img/navbj.jpg) repeat-x;
+}
+.nav ul li {
+
+    display: inline-block;
+    
+    width: 100px;
+    line-height: 44px;
+    text-align: center;
+}
+.nav li a{
+    
+    font-size: 18px;
+    font-weight: 100;
+    color: #363601;
+}
+
+.nav li a:hover,
+.content-left li a:hover
+{
+
+    text-decoration: underline;
+}
+
+.nav ul li + li {
+    background: url(../img/navimg.jpg) no-repeat left center;
+}
+
+
+/* 广告 样式*/
+.banner{
+    /*background-color: blue;*/
+}
+
+.banner img{
+    margin: 0 !important;
+    width: 100%;
+    display:block;
+}
+
+
+/* 内容样式 */
+
+.content {
+
+    height: 358px;
+    background: url("../img/content_bg.jpg") repeat-x;
+
+    /*background-color: blue;*/
+}
+
+/* 内容左边样式 */
+.content-left{
+
+    float: left;
+    width: 330px;
+    height: 336px;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 2px;
+    margin-right: 15px;
+    border: 1px solid #D7D7D7;
+
+    background: url("../img/content_sm_bg.jpg") repeat-x;
+}
+
+.content-left img{
+    margin: 15px;
+    margin-left: 50px;
+}
+
+.content-left ul {
+    margin: 0 auto;
+}
+.content-left li {
+
+    background: url(../img/dashed.jpg) repeat-x center bottom;
+}
+
+.content-left li a {
+    display: block;
+
+    padding-left: 20px;
+    background: url("../img/ico.jpg") no-repeat center left;
+
+    line-height: 30px;
+    font-size: 12px;
+}
+
+
+/* 内容中间样式 */
+.content-mid{
+
+    float: left;
+
+    width: 418px;
+    height: 336px;
+    margin-top: 0;
+    margin-right: 15px;
+    border: 1px solid #D7D7D7;
+    overflow: hidden;
+
+    background: url("../img/content_sm_bg.jpg") repeat-x;
+}
+
+.content-mid img{
+    margin: 25px;
+    margin-left: 45px;
+}
+
+.content-mid p {
+
+    width: 380px;
+    margin: 0 auto;
+
+    line-height: 30px;
+    font-size: 12px;
+    text-align: left;
+}
+
+/* 内容右边样式 */
+.content-right{
+
+    float: left;
+
+    width: 326px;
+    height: 336px;
+    margin-top: 0;
+    margin-right: 2px;
+    border: 1px solid #D7D7D7;
+
+    background: url("../img/content_sm_bg.jpg") repeat-x;
+}
+
+.content-right img {
+
+    margin: 25px 35px 10px 35px;
+
+    border-bottom: 1px solid #D0CEC6;
+}
+
+.content-right p {
+
+    width: 250px;
+    margin: 0 auto;
+
+    font-size: 12px;
+    line-height: 27px;
+    text-align: left;
+}
+
+/* 内容 标题共同样式 */
+h3.content-title {
+
+    /*margin-top: 0 !important;*/
+    margin-left: 10px;
+    padding-left: 30px;
+    background: url(../img/contentimg.jpg) no-repeat center left;
+}
+
+
+/* 下边产品展示 样式*/
+.product {
+
+    height: 340px;
+    background: url(../img/bottom_bg.jpg) repeat-x;
+
+}
+
+.prod-left {
+
+    float: left;
+
+    width: 326px;
+    height: 300px;
+    margin-left: 2px;
+    margin-right: 15px;
+    border: 1px solid #d7d7d7;
+
+    background: url("../img/content_sm_bg.jpg") repeat-x;
+}
+
+.prod-right {
+
+    float: right;
+
+    width: 760px;
+    height: 300px;
+    border: 1px solid #d7d7d7;
+
+    background: url("../img/content_sm_bg.jpg") repeat-x;
+}
+
+.prod-display img{
+    margin-right: 30px;
+}
+
+#prod-disp1,
+#prod-disp2{
+
+    display: inline;
+}
+
+#move-box{
+
+    height: 200px;
+
+    margin-top: 60px;
+    margin-left: 30px;
+    margin-right: 20px;
+
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+/*  底部 说明 样式*/
+.footer {
+
+    width: 750px;
+    height: 60px;
+    margin: 25px auto;
+
+    font-size: 12px;
+    line-height: 20px;
+    color: #000;
+}
+
+
+
+
+
+
+
+
+
+
+

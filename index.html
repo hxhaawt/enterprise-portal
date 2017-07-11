@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<title>某智能家居企业门户网站</title>
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+		
+		<header>
+			<div class="container header">
+				
+				<a href="index.html" ><img src="img/logo.jpg" class="header-logo" alt="this is logo"></a>
+				
+				<div class="header-content">
+					<a href="###" title="设为首页">设为首页</a>
+					<span>&nbsp;|&nbsp;</span>
+					<a href="###" title="设为首页">联系我们</a>
+					<div class="header-tel">
+						<img src="img/top.jpg">
+					</div>
+				</div>
+			</div>
+		</header>
+		
+		<nav>
+			<div class="nav">
+				<div class="container">
+					<ul>
+						<li><a href="index.html">首页</a></li>
+						<li><a href="./html-src/about-us.html">关于我们</a></li>
+						<li><a href="./html-src/news.html">新闻资讯</a></li>
+						<li><a href="./html-src/products.html">产品介绍</a></li>
+						<li><a href="./html-src/solution.html">解决方案</a></li>
+						<li><a href="./html-src/experience-center.html">体验中心</a></li>
+						<li><a href="./html-src/successful-demo.html">成功案例</a></li>
+						<li><a href="./html-src/cooperation.html">加盟合作</a></li>
+						<li><a href="./html-src/data-download.html">资料下载</a></li>
+						<li><a href="./html-src/contact-us.html">联系我们</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		
+		<div class="container banner">
+			<img src="img/banner1.jpg" alt="广告图片">
+		</div>
+		
+		<div class="container content clearfix">
+			<div class="content-left">
+				<h3 class="content-title">新闻动态 News</h3>
+				<img class="content-img" src="img/newsimg.jpg" alt="新闻图片">
+				<ul>
+					<li><a href="###">西城市为主的生活与住区</a></li>
+					<li><a href="###">西城市为主的生活与住区</a></li>
+					<li><a href="###">西城市为主的生活与住区</a></li>
+					<li><a href="###">西城市为主的生活与住区</a></li>
+				</ul>
+			</div>
+			<div class="content-mid">
+				<h3 class="content-title">公司动态 Company</h3>
+				<img class="content-img" src="img/companyimg.jpg" alt="公司图片">
+				<p>
+					新智达有限公司位于成都市高新区--成都市软件产业园。
+					新智达科技有限公司是以智能家居产品研发和销售为主的高科技企业。
+					新智达的所有产品均通过国家权威部门的检测，
+					高于国家对电工电子产品质量和安全的认证要求。......
+				</p>
+			</div>
+			<div class="content-right">
+				<h3 class="content-title">联系我们 Contact us</h3>
+				<img class="content-img" src="img/Contactimg.jpg" alt="联系图片">
+				<p>
+					公司名称：某某智能家居技术开发有限公司
+					<br>
+					公司地址：天府软园
+					<br>
+					公司电话：400-12345678
+					<br>
+					公司传真：400-12345678
+					<br>
+					业务负责人：黄先生
+					<br>
+					公司网址：www.maizi.com
+				</p>
+			</div>
+		</div>
+		
+		<div class="container product clearfix">
+			<div class="prod-left">
+				<h3 class="content-title" style="margin-bottom: 30px;">视频中心 Video</h3>
+				<embed src="http://player.youku.com/player.php/sid/XNTI5MjI1MDI4/v.swf"
+				       allowFullScreen="true"
+				       quality="high"
+				       width="320"
+				       height="200"
+				       align="middle"
+				       allowScriptAccess="always"
+				       type="application/x-shockwave-flash">
+					
+				</embed>
+			</div>
+			<div class="prod-right">
+				<h3 class="content-title">产品展示 Product display</h3>
+				<div id="move-box">
+					<div id="prod-disp1" class="prod-display">
+						<img src="img/chanpin.jpg">
+						<img src="img/chanpin.jpg">
+						<img src="img/chanpin.jpg">
+						<img src="img/chanpin.jpg">
+						<img src="img/chanpin.jpg">
+						<img src="img/chanpin.jpg">
+						<img src="img/chanpin.jpg">
+					</div>
+					<div id="prod-disp2" ></div>
+				</div>
+			</div>
+		</div>
+		
+		<footer>
+			<div class="footer">
+				地址:成都青羊区人民中路一段26号;
+				电话:028-66666668
+				传真:028-66666668
+				邮箱：524270754@qq.com JOYRILL
+				<br>
+				新智达有限公司 版权所有 Copyright @2015 All rights reserved.
+				ICP 备案号:蜀ICP备1234567
+			</div>
+		</footer>
+
+<script>
+    window.onload = function(){
+        scrollLeft();
+    };
+    
+    function scrollLeft(){
+        var speed = 30;
+        var tab = document.getElementById('move-box');
+        var tab1 = document.getElementById('prod-disp1');
+        var tab2 = document.getElementById('prod-disp2');
+        
+        tab2.innerHTML = tab1.innerHTML;
+//        console.log(tab2.offsetWidth);
+//        console.log(tab.scrollLeft);
+        function Marquee(){
+            if(tab2.offsetWidth - tab.scrollLeft <=0) {
+                tab.scrollLeft = 0;
+            }else{
+                tab.scrollLeft ++;
+            }
+
+        }
+        var timer = setInterval(Marquee,speed);
+        tab.onmouseover = function(){
+            clearInterval(timer);
+        };
+        tab.onmouseout = function(){
+            timer = setInterval(Marquee,speed);
+        }
+    }
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

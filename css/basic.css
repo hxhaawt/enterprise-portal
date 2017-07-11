@@ -1,0 +1,479 @@
+
+/* =================================================================
+*   因为除了首页之外其他页面样式差不多，所以除了
+*   首页之外 所有页面的样式都写在这里
+* ================================================================== */
+
+
+body {
+    margin: 0;
+    padding: 0;
+    color: rgb(93, 90, 90);
+    background: url("../img/bj.gif");
+}
+
+/*  公共 样式 */
+a {
+    color: #5D5A5A;
+    text-decoration: none;
+}
+
+ul{
+    list-style-type: none;
+}
+
+img {
+    border: 0;
+
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+
+.container {
+
+    width: 1116px;
+    margin: 0 auto;
+}
+
+.header {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.header-logo {
+    margin-top: 30px;
+}
+.header-content {
+    float: right;
+}
+.header-content a,
+.header-content span {
+
+    font-weight: bold;
+    font-size: 15px;
+    color: #7A7A0A;
+}
+.header-tel {
+    margin-top: 15px;
+}
+
+/* 导航样式 */
+div.nav{
+    height: 44px;
+
+    background: url(../img/navbj.jpg) repeat-x;
+}
+.nav ul li {
+
+    display: inline-block;
+    
+    width: 100px;
+    line-height: 44px;
+    text-align: center;
+}
+.nav li a{
+    
+    font-size: 18px;
+    font-weight: 100;
+    color: #363601;
+}
+
+.nav li a:hover,
+.content-left li a:hover
+{
+
+    text-decoration: underline;
+}
+
+.nav ul li + li {
+    background: url(../img/navimg.jpg) no-repeat left center;
+}
+
+
+/* 广告 样式*/
+.banner{
+    /*background-color: blue;*/
+}
+
+.banner img{
+    margin: 0 !important;
+    width: 100%;
+    display:block;
+}
+
+/*  底部 说明 样式*/
+.footer {
+
+    width: 750px;
+    height: 60px;
+    margin: 25px auto;
+
+    font-size: 12px;
+    line-height: 20px;
+    color: #000;
+}
+
+/* =================================================================
+*   关于 我们页面 样式 about-us.html
+* ================================================================== */
+
+.content {
+    background-color: #fff;
+}
+
+.content-lf {
+
+    float: left;
+    overflow: hidden;
+    margin: 0;
+    width: 260px;
+}
+
+.content-lf  .list-title {
+
+    margin: 0 auto;
+    padding-left: 20px;
+    height: 35px;
+    line-height: 35px;
+
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #363601;
+}
+
+.content-lf .list-nav {
+
+    margin: 0;
+    margin-bottom: 10px;
+    padding: 0;
+
+    background: #DBDDE6;
+}
+
+.content-lf .list-nav .first{
+    height: 20px;
+}
+.content-lf .list-nav li{
+
+    /*padding-left: 10px;*/
+    height: 35px;
+    line-height: 35px;
+    border-top: 1px solid #fff;
+}
+.content-lf .list-nav a {
+    display: block;
+    margin-left: 10px;
+    font-size: 12px;
+}
+.content-lf .list-nav a:hover {
+    
+    background-color: #363601;
+}
+
+.content-lf-nav .list-new{
+    margin: 10px 0;
+    padding: 0;
+}
+
+.content-lf-nav .list-new li{
+
+    margin-left: 10px;
+    padding-left: 10px;
+
+    background: url(../img/ico2.jpg) no-repeat left center;
+}
+
+.content-lf-nav .list-new a {
+    line-height: 25px;
+    font-size: 12px;
+}
+.content-lf-nav .list-new a:hover {
+
+    text-decoration: underline;
+}
+
+
+.content-rt {
+
+    float: left;
+    overflow: hidden;
+
+    margin-left: 20px;
+    margin-right: 15px;
+
+    width: 820px;
+}
+.content-rt-title {
+
+    border-bottom: 1px dashed #000;
+}
+
+.content-rt-title img {
+    margin: 10px 0;
+}
+
+.content-rt-msg p{
+
+    text-indent: 2em;
+    color: #000;
+    font-size: 16px;
+    width: 810px;
+}
+.content-rt-msg h4{
+
+    text-indent: 2em;
+    font-size: 16px;
+}
+
+/* =================================================================
+*   关于 新闻 样式 news.html
+* ================================================================== */
+
+.news-list {
+    margin-top: 15px;
+    /*border: 1px solid gray;*/
+}
+.news-list h2 {
+
+    margin: 0;
+    background: url(../img/lv-left.gif) no-repeat;
+    height: 30px;
+    line-height: 30px;
+}
+
+.news-list h2 a {
+    font-size: 14px;
+    color: #000;
+
+    margin-left: 15px;
+}
+
+.news-list ul{
+    margin: 0;
+    padding: 0;
+    border: 1px solid #C1C1C1;
+    border-top: none;
+}
+
+.news-list ul li {
+
+    margin-left: 5px;
+    padding-left: 5px;
+    border-bottom: 1px dashed gray;
+
+    height: 35px;
+    line-height: 35px;
+
+    background: url(../img/ico2.jpg) no-repeat left center;
+}
+
+.news-list ul a {
+
+    font-size: 12px;
+}
+.news-list ul a:hover {
+
+    text-decoration: underline;
+}
+
+.news-list ul span {
+
+    float: right;
+    margin-right: 20px;
+
+    font-size: 12px;
+}
+
+
+/* =================================================================
+*   关于 产品展示 products.html
+* ================================================================== */
+
+.product {
+    margin: 10px 0;
+}
+.product h2 {
+
+    margin: 0;
+    padding: 0;
+}
+
+.product h2 {
+
+    margin: 0;
+    background: url(../img/lv-left.gif) no-repeat;
+    height: 30px;
+    line-height: 30px;
+}
+
+.product h2 a {
+    font-size: 14px;
+    color: #000;
+
+    margin-left: 15px;
+}
+.product-list {
+
+    padding-left: 15px;
+    border: 1px solid #C1C1C1;
+    border-top: none;
+}
+.product ul {
+
+    margin: 0;
+    padding: 0;
+}
+.product ul li {
+
+    display: inline-block;
+    margin: 8px 0;
+}
+
+.product ul li img {
+
+    border: 1px solid #C1C1C1;
+}
+
+.product ul li a {
+
+    font-size: 12px;
+    overflow: hidden;
+}
+
+.product ul li a:hover {
+
+    text-decoration: underline;
+}
+
+.product-list p {
+
+    margin: 5px 0;
+    padding: 0;
+
+    font-size: 14px;
+}
+
+
+/* =================================================================
+*   关于 解决方案 样式 solution.html
+* ================================================================== */
+
+.solution {
+
+    margin: 10px 0;
+}
+
+.solution h2{
+    margin: 0;
+    padding: 0;
+    background: url(../img/lv-left.gif) no-repeat;
+    height: 30px;
+    line-height: 30px;
+}
+.solution h2 a {
+
+    padding-left: 10px;
+
+    font-size: 14px;
+    color: #000;
+}
+
+.solution-img {
+
+    padding: 10px;
+
+    border: 1px solid #C1C1C1;
+    border-top: none;
+
+}
+
+
+/* =================================================================
+*   关于 加盟方案 样式 cooperation.html
+* ================================================================== */
+
+
+.cooperation {
+
+    margin: 10px 0;
+}
+
+.cooperation h2{
+    margin: 0;
+    padding: 0;
+    background: url(../img/lv-left.gif) no-repeat;
+    height: 30px;
+    line-height: 30px;
+}
+.cooperation h2 a {
+
+    padding-left: 10px;
+
+    font-size: 14px;
+    color: #000;
+}
+
+.cooperation-img {
+
+    padding: 10px 35px;
+
+    border: 1px solid #C1C1C1;
+    border-top: none;
+}
+
+.cooperation-img >img {
+
+    display: block;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.cooperation-img .data-dn {
+    /*width:741px;*/
+    margin:0 auto;
+    background:#E5E6E8;
+}
+
+.data-dn img {
+
+    display: inline-block;
+    margin: 20px 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
