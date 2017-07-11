@@ -4,7 +4,10 @@
 	<meta charset="UTF-8">
 	<title>某智能家居企业门户网站</title>
 	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="lib/owl.carousel.min.css">
+	<link rel="stylesheet" href="lib/owl.theme.default.min.css">
 	<link rel="stylesheet" href="./css/index.css">
+
 </head>
 <body>
 		
@@ -44,7 +47,20 @@
 		</nav>
 		
 		<div class="container banner">
-			<img src="img/banner1.jpg" alt="广告图片">
+			<div class="owl-carousel owl-theme">
+				<div class="item">
+					<img src="img/banner1.jpg" alt="广告图片">
+				</div>
+				<div class="item">
+					<img src="img/banner2.jpg" alt="广告图片">
+				</div>
+				<div class="item">
+					<img src="img/banner3.jpg" alt="广告图片">
+				</div>
+				<div class="item">
+					<img src="img/banner4.jpg" alt="广告图片">
+				</div>
+			</div>
 		</div>
 		
 		<div class="container content clearfix">
@@ -129,37 +145,55 @@
 				ICP 备案号:蜀ICP备1234567
 			</div>
 		</footer>
-
+		
+		
+<script src="lib/jquery.min.js"></script>
+<script src="lib/owl.carousel.min.js"></script>
 <script>
-    window.onload = function(){
-        scrollLeft();
-    };
-    
-    function scrollLeft(){
-        var speed = 30;
-        var tab = document.getElementById('move-box');
-        var tab1 = document.getElementById('prod-disp1');
-        var tab2 = document.getElementById('prod-disp2');
-        
-        tab2.innerHTML = tab1.innerHTML;
-//        console.log(tab2.offsetWidth);
-//        console.log(tab.scrollLeft);
-        function Marquee(){
-            if(tab2.offsetWidth - tab.scrollLeft <=0) {
-                tab.scrollLeft = 0;
-            }else{
-                tab.scrollLeft ++;
-            }
 
+    $(document).ready(function () {
+        
+        $(".owl-carousel").owlCarousel({
+            items: 1,
+            loop: true,
+            autoplay: true,
+            autoplayTime: 3000,
+            autoplayHoverPause: true
+        });
+
+        scrollLeft();
+		
+	    //  自动移动图片 功能
+        function scrollLeft(){
+            var speed = 30;
+            var tab = document.getElementById('move-box');
+            var tab1 = document.getElementById('prod-disp1');
+            var tab2 = document.getElementById('prod-disp2');
+
+            tab2.innerHTML = tab1.innerHTML;
+
+            function Marquee(){
+                if(tab2.offsetWidth - tab.scrollLeft <=0) {
+                    tab.scrollLeft = 0;
+                }else{
+                    tab.scrollLeft ++;
+                }
+            }
+            var timer = setInterval(Marquee,speed);
+            tab.onmouseover = function(){
+                clearInterval(timer);
+            };
+            tab.onmouseout = function(){
+                timer = setInterval(Marquee,speed);
+            }
         }
-        var timer = setInterval(Marquee,speed);
-        tab.onmouseover = function(){
-            clearInterval(timer);
-        };
-        tab.onmouseout = function(){
-            timer = setInterval(Marquee,speed);
-        }
-    }
+    });
+    
+//    window.onload = function(){
+//        scrollLeft();
+//    };
+    
+
 </script>
 </body>
 </html>
