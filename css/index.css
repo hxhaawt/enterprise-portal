@@ -23,7 +23,6 @@ ul{
 
 img {
     border: 0;
-
 }
 
 .clearfix:before,
@@ -69,7 +68,7 @@ img {
 div.nav{
     height: 44px;
 
-    background: url(../img/navbj.jpg) repeat-x;
+    background: url("../img/navbj.jpg") repeat-x;
 }
 .nav ul li {
 
@@ -94,7 +93,7 @@ div.nav{
 }
 
 .nav ul li + li {
-    background: url(../img/navimg.jpg) no-repeat left center;
+    background: url("../img/navimg.jpg") no-repeat left center;
 }
 
 
@@ -145,7 +144,7 @@ div.nav{
 }
 .content-left li {
 
-    background: url(../img/dashed.jpg) repeat-x center bottom;
+    background: url("../img/dashed.jpg") repeat-x center bottom;
 }
 
 .content-left li a {
@@ -226,7 +225,7 @@ h3.content-title {
     /*margin-top: 0 !important;*/
     margin-left: 10px;
     padding-left: 30px;
-    background: url(../img/contentimg.jpg) no-repeat center left;
+    background: url("../img/contentimg.jpg") no-repeat center left;
 }
 
 
@@ -234,7 +233,7 @@ h3.content-title {
 .product {
 
     height: 340px;
-    background: url(../img/bottom_bg.jpg) repeat-x;
+    background: url("../img/bottom_bg.jpg") repeat-x;
 
 }
 
