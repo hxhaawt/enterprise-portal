@@ -311,7 +311,7 @@ div.nav{
 .product h2 {
 
     margin: 0;
-    background: url(../img/lv-left.gif) no-repeat;
+    background: url("../img/lv-left.gif") no-repeat;
     height: 30px;
     line-height: 30px;
 }
@@ -376,7 +376,7 @@ div.nav{
 .solution h2{
     margin: 0;
     padding: 0;
-    background: url(../img/lv-left.gif) no-repeat;
+    background: url("../img/lv-left.gif") no-repeat;
     height: 30px;
     line-height: 30px;
 }
@@ -411,7 +411,7 @@ div.nav{
 .cooperation h2{
     margin: 0;
     padding: 0;
-    background: url(../img/lv-left.gif) no-repeat;
+    background: url("../img/lv-left.gif") no-repeat;
     height: 30px;
     line-height: 30px;
 }
