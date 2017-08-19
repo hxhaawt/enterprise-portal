@@ -144,7 +144,7 @@ div.nav{
 }
 .content-left li {
 
-    background: url("../img/dashed.jpg") repeat-x center bottom;
+    background: url("../img/dashed.jpg") repeat-x bottom center;
 }
 
 .content-left li a {

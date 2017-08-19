@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>回弹效果</title>
+    <!-- 设置网页统一在外部打开 -->
+    <base target="_self">
+	<style>
+		
+		#demo{
+			width: 1000px;
+			height: 500px;
+			overflow:hidden;
+			font-size:13px;
+			color:#0C77CF;
+            background-color: #555;
+			font-weight:bold;
+			margin: 0 auto;
+		}
+		#move-box {
+			width: 900px;
+			height: 30px;
+            line-height:30px;
+			margin: 0 auto;
+			white-space: nowrap;
+			overflow: hidden;
+            background-color: green;
+		}
+		#demo1,
+		#demo2
+		{
+			display: inline;
+            /* line-height:30px; */
+		}
+
+		#demo1{
+			background-color: red;
+		}
+		#demo2{
+			background-color: blue;
+		}
+
+        #move-box2 {
+            width: 900px;
+            height: 200px;
+            margin: 30px auto;
+            white-space: nowrap;
+            overflow: hidden;
+            border: 2px solid blue;
+            background-color: green;
+        }
+        #content1,
+        #content2 {
+            margin: 0;
+            padding-left: 30px;
+            /* display: inline; */
+            background-color: #fff;
+        }
+        #content1 li,
+        #content2 li {
+            line-height: 20px;
+            padding-left: 10px;
+            padding-bottom: 5px;
+        }
+
+	</style>
+</head>
+<body>
+
+<div id="demo">
+
+    <div id="move-box">
+        <div id="demo1">
+            <a href="">测试文字1</a>
+            <a href="">测试文字2</a>
+            <a href="">测试文字3</a>
+            <a href="">测试文字4</a>
+            <a href="">测试文字5</a>
+            <a href="">测试文字7</a>
+            <a href="">测试文字8</a>
+            <a href="">测试文字9</a>
+            <a href="">测试文字10</a>
+            <a href="">测试文字11</a>
+            <a href="">测试文字12</a>
+            <a href="">测试文字13</a>
+            <a href="">测试文字14</a>
+            <a href="">测试文字15</a>
+            <a href="">测试文字16</a>
+            <a href="">测试文字17</a>
+        </div>
+        <div id="demo2"></div>
+    </div>
+
+
+    <div id="move-box2">
+        <ol id="content1">
+            <li><a target='_blank' href="http://www.baidu.com">百度</a></li>
+            <li><a target='_blank' href="http://www.taobao.com">淘宝</a></li>
+            <li><a href="http://www.w3school.com.cn">W3C school</a></li>
+            <li><a href="###">测试文字4</a></li>
+            <li><a href="###">测试文字5</a></li>
+            <li><a href="###">测试文字6</a></li>
+            <li><a href="###">测试文字7</a></li>
+            <li><a href="###">测试文字8</a></li>
+            <li><a href="###">测试文字9</a></li>
+            <li><a href="###">测试文字10</a></li>
+            <li><a href="###">测试文字11</a></li>
+            <li><a href="###">测试文字12</a></li>
+            <li><a href="###">测试文字13</a></li>
+            <li><a href="###">测试文字14</a></li>
+            <li><a href="###">测试文字15</a></li>
+            <li><a href="###">测试文字16</a></li>
+        </ol>
+        <ol id="content2"></ol>
+    </div>
+
+</div>
+<script>
+    window.onload = function(){
+
+        scrollLeft();
+
+        function scrollLeft(){
+            var speed = 20;
+            var box = document.getElementById('move-box');
+            var tab1 = document.getElementById('demo1');
+            var tab2 = document.getElementById('demo2');
+            
+            tab2.innerHTML = tab1.innerHTML;
+            
+            function Marquee(){
+                
+                if(tab2.offsetWidth - box.scrollLeft <=0) {
+                    box.scrollLeft = 0;
+                }else{
+                    box.scrollLeft ++;
+                }
+            }
+            var timer = setInterval(Marquee, speed);
+            box.onmouseover = function(){
+                clearInterval(timer);
+            };
+            box.onmouseout = function(){
+                timer = setInterval(Marquee, speed);
+            };
+
+            // move 2
+            var speed2 = 50;
+            var box2 = document.getElementById('move-box2');
+            var cont1 = document.getElementById('content1');
+            var cont2 = document.getElementById('content2');
+
+            cont2.innerHTML = cont1.innerHTML;
+            box2.scrollTop = 0;
+
+            function Marquee2(){
+
+                if(cont1.scrollHeight - box2.scrollTop <=0) {
+                    box2.scrollTop = 0;
+                }else{
+                    box2.scrollTop ++;
+                }
+            }
+
+            var timer2 = setInterval(Marquee2, speed2);
+
+            box2.onmouseover = function(){
+                clearInterval(timer2);
+            };
+            box2.onmouseout = function(){
+                timer2 = setInterval(Marquee2, speed2);
+            };
+        }
+    };
+
+
+
+
+
+</script>
+</body>
+</html>
